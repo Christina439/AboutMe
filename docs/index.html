@@ -1,301 +1,259 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>About Christina</title>
 
- 
-
 <style>
-
 * {
-
-margin: 0;
-
-padding: 0;
-
-box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
- 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-
-font-family: Arial, sans-serif;
-
-background: linear-gradient(135deg, #ff6b6b, #6c63ff, #00c9a7);
-
-min-height: 100vh;
-
-padding: 40px;
-
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+    color: #333;
 }
 
- 
-
-.container {
-
-max-width: 1000px;
-
-margin: auto;
-
-}
-
- 
-
+/* Header */
 header {
-
-background: white;
-
-padding: 30px;
-
-border-radius: 20px;
-
-text-align: center;
-
-margin-bottom: 25px;
-
-box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-
+    background: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
- 
 
 header h1 {
-
-color: #6c63ff;
-
-font-size: 3rem;
-
+    color: #2d6a4f;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
-
- 
 
 header p {
-
-color: #666;
-
+    color: #666;
+    margin-bottom: 20px;
 }
 
- 
-
-.grid {
-
-display: grid;
-
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-gap: 20px;
-
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
- 
-
-.box {
-
-padding: 25px;
-
-border-radius: 20px;
-
-color: white;
-
-box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-transition: transform 0.3s ease;
-
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background-color: #40916c;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
- 
-
-.box:hover {
-
-transform: translateY(-8px);
-
+.navbar a:hover {
+    background-color: #2d6a4f;
+    transform: translateY(-3px);
 }
 
- 
+/* Full-screen sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
 
+/* Cards */
+.card {
+    width: 90%;
+    max-width: 900px;
+    padding: 50px;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.card p,
+.card li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Card Colors */
 .about {
-
-background: #ff6b6b;
-
+    background: #40916c;
 }
-
- 
 
 .skills {
-
-background: #6c63ff;
-
+    background: #52b788;
 }
-
- 
 
 .hobbies {
-
-background: #00c9a7;
-
+    background: #74c69d;
 }
-
- 
 
 .contact {
-
-background: #ff9f43;
-
+    background: #2d6a4f;
 }
 
- 
-
-.box h2 {
-
-margin-bottom: 15px;
-
+/* Skill tags */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
 }
-
- 
 
 .skill-tag {
-
-display: inline-block;
-
-background: rgba(255,255,255,0.25);
-
-padding: 8px 12px;
-
-border-radius: 20px;
-
-margin: 5px;
-
+    background: rgba(255,255,255,0.2);
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
- 
+/* Lists */
+ul {
+    padding-left: 20px;
+}
 
+/* Contact Links */
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+.card {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
 footer {
-
-margin-top: 25px;
-
-text-align: center;
-
-color: white;
-
+    text-align: center;
+    padding: 25px;
+    color: #2d6a4f;
+    font-weight: bold;
 }
-
 </style>
-
 </head>
-
 <body>
 
- 
-
-<div class="container">
-
- 
-
 <header>
+    <h1>Christina Radoor</h1>
+    <p>🎓 Student • 💻 Learner • 🌱 Creator</p>
 
-<h1>Christina Radoor</h1>
-
-<p>Student • Learner • Creator</p>
-
+    <nav class="navbar">
+        #aboutAbout Me</a>
+        #skillsSkills</a>
+        #hobbiesHobbies</a>
+        #contactContact</a>
+    </nav>
 </header>
 
- 
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="card about">
+        <h2>🌟 About Me</h2>
+        <p>
+            Hello! I'm Christina, a student with a passion for learning,
+            creativity, and technology. I enjoy discovering new skills,
+            tackling challenges, and working on exciting projects.
+        </p>
 
-<div class="grid">
+        <p style="margin-top:20px;">
+            My goal is to continue growing both personally and professionally,
+            while developing skills that allow me to make a positive impact.
+        </p>
+    </div>
+</section>
 
- 
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <div class="card skills">
+        <h2>💻 Skills</h2>
 
-<div class="box about">
+        <div class="skills-container">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Teamwork</span>
+        </div>
+    </div>
+</section>
 
-<h2>🌟 About Me</h2>
+<!-- HOBBIES -->
+<section id="hobbies" class="section">
+    <div class="card hobbies">
+        <h2>🎨 Hobbies</h2>
 
-<p>
+        <ul>
+            <li>Coding and Web Design</li>
+            <li>Reading</li>
+            <li>Gaming</li>
+            <li>Listening to Music</li>
+            <li>Learning New Technologies</li>
+        </ul>
+    </div>
+</section>
 
-Hi! I'm Christina. I'm a student who enjoys learning new
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="card contact">
+        <h2>📬 Contact Me</h2>
 
-skills, exploring technology, and working on creative projects.
+        <p>📧 your.email@example.com</p>
+        <br>
 
-</p>
+        <p>🐙 github.com/yourusername</p>
+        <br>
 
-</div>
-
- 
-
-<div class="box skills">
-
-<h2>💻 Skills</h2>
-
-<span class="skill-tag">HTML</span>
-
-<span class="skill-tag">CSS</span>
-
-<span class="skill-tag">JavaScript</span>
-
-<span class="skill-tag">Problem Solving</span>
-
-</div>
-
- 
-
-<div class="box hobbies">
-
-<h2>🎨 Hobbies</h2>
-
-<ul>
-
-<li>Coding</li>
-
-<li>Reading</li>
-
-<li>Gaming</li>
-
-<li>Music</li>
-
-</ul>
-
-</div>
-
- 
-
-<div class="box contact">
-
-<h2>📬 Contact</h2>
-
-<p>Email: your@email.com</p>
-
-<p>GitHub: github.com/yourname</p>
-
-<p>LinkedIn: linkedin.com/in/yourname</p>
-
-</div>
-
- 
-
-</div>
-
- 
+        <p>💼 linkedin.com/in/yourusername</p>
+    </div>
+</section>
 
 <footer>
-
-<p>✨ Thanks for visiting my page! ✨</p>
-
+    ✨ Thanks for visiting my website! ✨
 </footer>
 
- 
-
-</div>
-
- 
-
 </body>
-
 </html>

@@ -26,7 +26,7 @@ body {
 header {
     background: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -41,39 +41,21 @@ header h1 {
 
 header p {
     color: #666;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+/* Main container */
+.container {
+    width: 100%;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    background-color: #40916c;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #2d6a4f;
-    transform: translateY(-3px);
-}
-
-/* Full-screen sections */
+/* Sections stack vertically */
 .section {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 /* Cards */
@@ -102,7 +84,7 @@ header p {
     line-height: 1.8;
 }
 
-/* Card Colors */
+/* Individual card colors */
 .about {
     background: #40916c;
 }
@@ -119,7 +101,7 @@ header p {
     background: #2d6a4f;
 }
 
-/* Skill tags */
+/* Skills tags */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -130,16 +112,11 @@ header p {
 .skill-tag {
     background: rgba(255,255,255,0.2);
     padding: 12px 18px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: bold;
 }
 
-/* Lists */
-ul {
-    padding-left: 20px;
-}
-
-/* Contact Links */
+/* Contact links */
 .contact a {
     color: white;
     text-decoration: none;
@@ -149,9 +126,9 @@ ul {
     text-decoration: underline;
 }
 
-/* Animation */
+/* Simple fade-in animation */
 .card {
-    animation: fadeUp 0.8s ease;
+    animation: fadeUp 1s ease;
 }
 
 @keyframes fadeUp {
@@ -165,10 +142,25 @@ ul {
     }
 }
 
-/* Footer */
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2d6a4f;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1b4332;
+}
+
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 30px;
     color: #2d6a4f;
     font-weight: bold;
 }
@@ -180,79 +172,84 @@ footer {
     <h1>Christina Radoor</h1>
     <p>🎓 Student • 💻 Learner • 🌱 Creator</p>
 
-    <nav class="navbar">
-        #aboutAbout Me</a>
+    <nav>
+        #aboutAbout</a>
         #skillsSkills</a>
         #hobbiesHobbies</a>
         #contactContact</a>
     </nav>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <div class="card about">
-        <h2>🌟 About Me</h2>
-        <p>
-            Hello! I'm Christina, a student with a passion for learning,
-            creativity, and technology. I enjoy discovering new skills,
-            tackling challenges, and working on exciting projects.
-        </p>
+<div class="container">
 
-        <p style="margin-top:20px;">
-            My goal is to continue growing both personally and professionally,
-            while developing skills that allow me to make a positive impact.
-        </p>
-    </div>
-</section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="card about">
+            <h2>🌟 About Me</h2>
+            <p>
+                Hello! I'm Christina, a student with a passion for learning,
+                creativity, and technology. I enjoy discovering new skills,
+                tackling challenges, and working on projects that help me grow.
+            </p>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-    <div class="card skills">
-        <h2>💻 Skills</h2>
-
-        <div class="skills-container">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">Communication</span>
-            <span class="skill-tag">Teamwork</span>
+            <p style="margin-top:20px;">
+                My goal is to continue developing my abilities and creating
+                meaningful work while exploring opportunities in education,
+                technology, and personal development.
+            </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- HOBBIES -->
-<section id="hobbies" class="section">
-    <div class="card hobbies">
-        <h2>🎨 Hobbies</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="card skills">
+            <h2>💻 Skills</h2>
 
-        <ul>
-            <li>Coding and Web Design</li>
-            <li>Reading</li>
-            <li>Gaming</li>
-            <li>Listening to Music</li>
-            <li>Learning New Technologies</li>
-        </ul>
-    </div>
-</section>
+            <div class="skills-container">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Communication</span>
+            </div>
+        </div>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <div class="card contact">
-        <h2>📬 Contact Me</h2>
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section">
+        <div class="card hobbies">
+            <h2>🎨 Hobbies</h2>
 
-        <p>📧 your.email@example.com</p>
-        <br>
+            <ul>
+                <li>Coding and web development</li>
+                <li>Reading and learning new topics</li>
+                <li>Gaming with friends</li>
+                <li>Listening to music</li>
+                <li>Exploring new technology</li>
+            </ul>
+        </div>
+    </section>
 
-        <p>🐙 github.com/yourusername</p>
-        <br>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="card contact">
+            <h2>📬 Contact Me</h2>
 
-        <p>💼 linkedin.com/in/yourusername</p>
-    </div>
-</section>
+            <p>📧 your.email@example.com</p>
+            <br>
+
+            <p>🐙 #GitHub Profile</a></p>
+            <br>
+
+            <p>💼 #LinkedIn Profile</a></p>
+        </div>
+    </section>
+
+</div>
 
 <footer>
-    ✨ Thanks for visiting my website! ✨
+    ✨ Thanks for visiting my page! ✨
 </footer>
 
 </body>

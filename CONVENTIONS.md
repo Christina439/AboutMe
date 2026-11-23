@@ -1,7 +1,7 @@
 # CONVENTIONS
 This document desribes the AboutMe project and it's rules
 ## Project
-I'm developing a personal about me site. The website should be modern and userfriendly
+I'm developing a personal about me site. The website should be modern, simple and userfriendly
 
 ## State
 
@@ -21,3 +21,5 @@ I'm developing a personal about me site. The website should be modern and userfr
 - american english spelling in visible text
 - all colors as CSS variables in: root, never hard-coded
 - 2-space identation
+
+

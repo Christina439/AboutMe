@@ -6,9 +6,10 @@ I'm developing a personal about me site. The website should be modern and userfr
 ## State
 
 ## File structure
-- keep html and style.css in separate files
+- keep html, css and javascript in separate files
 - html must be placed in index.html
 - css must be placed in style.css
+- javascript must be placed in script.js
 
 ## Design
 - make the website responsive for desktop, tablet and mobile

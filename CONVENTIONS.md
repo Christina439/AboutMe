@@ -16,7 +16,7 @@ I'm developing a personal about me site. The website should be modern and userfr
 
 ## Code
 - write a short comment above each CSS section
-- the same "<nav>" block on every page
+- the same nav block on every page
 - american english spelling in visible text
 - all colors as CSS variables in: root, never hard-coded
 - 2-space identation

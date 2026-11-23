@@ -1,0 +1,198 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #edf6ee,
+        #d9eadf,
+        #cfe3d5
+    );
+    color: #333;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 40px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    color: #4f7a5b;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b8f71;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4f7a5b;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2f5238;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* Cards */
+.card {
+    width: 90%;
+    max-width: 900px;
+    padding: 50px;
+    border-radius: 30px;
+
+    background: #95b89b;
+
+    color: white;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.3s ease;
+
+    animation: fadeUp 0.8s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Headings */
+.card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.card h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.card p,
+.card li {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.spacing {
+    margin-top: 20px;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: white;
+    color: #4f7a5b;
+    transform: scale(1.05);
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+/* Contact */
+.contact a,
+.card a {
+    color: white;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #4f7a5b;
+    font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 35px;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+}

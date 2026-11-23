@@ -25,7 +25,7 @@ body {
 header {
     background: rgba(255, 255, 255, 0.95);
     text-align: center;
-    padding: 40px 20px;
+    padding: 25px 20px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -35,7 +35,7 @@ header {
 
 header h1 {
     color: #4f7a5b;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
@@ -62,13 +62,28 @@ nav a:hover {
     color: #2f5238;
 }
 
+/* Main Container */
+.container {
+    width: 100%;
+}
+
+/* Prevent sticky header from covering section titles */
+section {
+    scroll-margin-top: 140px;
+}
+
 /* Sections */
 .section {
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
+    align-items: flex-start;
+    padding: 35px 20px 45px;
+}
+
+/* First section sits closer to header */
+#about {
+    padding-top: 20px;
 }
 
 /* Cards */
@@ -77,16 +92,12 @@ nav a:hover {
     max-width: 900px;
     padding: 50px;
     border-radius: 30px;
-
     background: #95b89b;
-
     color: white;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-
     transition: all 0.3s ease;
-
     animation: fadeUp 0.8s ease;
+    margin: 0 auto;
 }
 
 .card:hover {
@@ -112,6 +123,7 @@ nav a:hover {
     border-radius: 20px;
 }
 
+/* Text */
 .card p,
 .card li {
     color: white;
@@ -150,8 +162,7 @@ ul {
     padding-left: 20px;
 }
 
-/* Contact */
-.contact a,
+/* Links inside cards */
 .card a {
     color: white;
     text-decoration: none;
@@ -182,17 +193,55 @@ footer {
     }
 }
 
-/* Mobile */
+/* Tablet */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.2rem;
     }
 
+    section {
+        scroll-margin-top: 120px;
+    }
+
+    .section {
+        min-height: auto;
+        padding: 25px 15px 35px;
+    }
+
+    #about {
+        padding-top: 15px;
+    }
+
     .card {
+        width: 95%;
         padding: 35px;
     }
 
     .card h2 {
         font-size: 1.8rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    section {
+        scroll-margin-top: 110px;
+    }
+
+    .section {
+        padding: 20px 12px 30px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
     }
 }

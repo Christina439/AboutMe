@@ -12,14 +12,18 @@ I'm developing a personal about me site. The website should be modern, simple an
 - javascript must be placed in script.js
 
 ## Design
-- make the website responsive for desktop, tablet and mobile
+- make the website responsive for desktop, tablet and mobile devices
+- maintain a consistent design and visual style across all pages
 
 
 ## Code
-- write a short comment above each CSS section
-- the same nav block on every page
-- american english spelling in visible text
+- write a short comment above each CSS section explaining its purpose
+- use the same nav block on every page
+- use american english spelling in visible text
 - all colors as CSS variables in: root, never hard-coded
-- 2-space identation
+- use 2-space identation
+- add block content identation to reflect code hierarchy
+- class names in kebab-case(project-card)
+- no inline styles. all styling must be defined in style.css
 
 
